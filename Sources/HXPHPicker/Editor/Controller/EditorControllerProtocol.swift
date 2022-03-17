@@ -303,6 +303,9 @@ public protocol VideoEditorViewControllerDelegate: AnyObject {
     func videoEditorViewController(
         transitioEndPreviewFrame videoEditorViewController: VideoEditorViewController
     ) -> CGRect
+    
+    /// corp完成
+    func cropFinish()
 }
 
 public extension VideoEditorViewControllerDelegate {

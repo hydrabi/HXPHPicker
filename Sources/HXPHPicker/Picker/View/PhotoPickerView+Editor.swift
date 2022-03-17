@@ -95,6 +95,7 @@ extension PhotoPickerView: PhotoEditorViewControllerDelegate {
 }
 
 extension PhotoPickerView: VideoEditorViewControllerDelegate {
+    
     public func videoEditorViewController(
         _ videoEditorViewController: VideoEditorViewController,
         loadTitleChartlet response: @escaping EditorTitleChartletResponse) {

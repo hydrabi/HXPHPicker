@@ -87,6 +87,9 @@ extension PhotoPickerView: PhotoPreviewViewControllerDelegate {
 }
 
 extension PhotoPickerView: PhotoPickerControllerDelegate {
+    public func cropFinish() {
+    }
+    
     
     // MARK: 单独预览时的自定义转场动画
     /// present预览时展示的image

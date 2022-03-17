@@ -156,6 +156,9 @@ extension PhotoPreviewViewController: PhotoEditorViewControllerDelegate {
 }
 // MARK: VideoEditorViewControllerDelegate
 extension PhotoPreviewViewController: VideoEditorViewControllerDelegate {
+    public func cropFinish() {
+    }
+    
     public func videoEditorViewController(
         _ videoEditorViewController: VideoEditorViewController,
         loadTitleChartlet response: @escaping EditorTitleChartletResponse

@@ -212,6 +212,9 @@ extension EditorConfigurationViewController: PhotoEditorViewControllerDelegate {
     }
 }
 extension EditorConfigurationViewController: VideoEditorViewControllerDelegate {
+    func cropFinish() {
+    }
+    
     func getMusicInfos() -> [VideoEditorMusicInfo] {
         var musics: [VideoEditorMusicInfo] = []
 //        let audioUrl1 = Bundle.main.url(forResource: "天外来物", withExtension: "mp3")!

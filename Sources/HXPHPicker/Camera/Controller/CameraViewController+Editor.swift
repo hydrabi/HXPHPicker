@@ -31,6 +31,9 @@ extension CameraViewController: PhotoEditorViewControllerDelegate {
     }
 }
 extension CameraViewController: VideoEditorViewControllerDelegate {
+    public func cropFinish() {
+    }
+    
     func openVideoEditor(_ videoURL: URL) {
         let vc = VideoEditorViewController(
             videoURL: videoURL,

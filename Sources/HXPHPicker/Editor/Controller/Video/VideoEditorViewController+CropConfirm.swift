@@ -28,6 +28,7 @@ extension VideoEditorViewController: EditorCropConfirmViewDelegate {
             videoView.playerView.play()
             hiddenCropConfirmView()
             videoView.cancelCropTime(true)
+            delegate?.cropFinish()
         }else if state == .cropSize {
             pState = .normal
             videoView.finishCropping(true)

@@ -188,6 +188,9 @@ open class PhotoBrowser: PhotoPickerController {
 }
 
 extension PhotoBrowser: PhotoPickerControllerDelegate {
+    public func cropFinish() {
+    }
+    
     public func pickerController(
         _ pickerController: PhotoPickerController,
         viewControllersWillAppear viewController: UIViewController

@@ -674,6 +674,9 @@ class PickerResultViewController: UIViewController,
 
 // MARK: PhotoPickerControllerDelegate
 extension PickerResultViewController: PhotoPickerControllerDelegate {
+    func cropFinish() {
+    }
+    
     
     func pickerController(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
         selectedAssets = result.photoAssets

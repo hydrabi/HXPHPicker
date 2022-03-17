@@ -294,7 +294,7 @@ open class VideoEditorViewController: BaseViewController {
         cropConfirmView.delegate = self
         return cropConfirmView
     }()
-    lazy var topView: UIView = {
+    public lazy var topView: UIView = {
         let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
         let cancelBtn = UIButton.init(frame: CGRect(x: 0, y: 0, width: 57, height: 44))
         cancelBtn.setImage(UIImage.image(for: "hx_editor_back"), for: .normal)

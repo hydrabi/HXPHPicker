@@ -96,6 +96,9 @@ extension WeChatViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension WeChatViewController: PhotoPickerControllerDelegate {
+    func cropFinish() {
+    }
+    
     func pickerController(
         _ pickerController: PhotoPickerController,
         didFinishSelection result: PickerResult

@@ -82,6 +82,9 @@ class AvatarPickerConfigurationViewController: UITableViewController {
     }
 }
 extension AvatarPickerConfigurationViewController: PhotoPickerControllerDelegate {
+    func cropFinish() {
+    }
+    
     func pickerController(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
         pickerController.dismiss(animated: true) {
             let pickerResultVC = PickerResultViewController.init()

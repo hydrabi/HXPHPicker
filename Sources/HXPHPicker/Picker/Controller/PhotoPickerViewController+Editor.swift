@@ -135,6 +135,14 @@ extension PhotoPickerViewController: PhotoEditorViewControllerDelegate {
 }
 // MARK: VideoEditorViewControllerDelegate
 extension PhotoPickerViewController: VideoEditorViewControllerDelegate {
+    
+    public func cropFinish() {
+        if let pickerController = pickerController,
+           let pickerDelegate = pickerController.pickerDelegate {
+            pickerDelegate.cropFinish()
+        }
+    }
+    
     public func videoEditorViewController(
         _ videoEditorViewController: VideoEditorViewController,
         loadTitleChartlet response: @escaping EditorTitleChartletResponse) {

@@ -384,6 +384,9 @@ public protocol PhotoPickerControllerDelegate: AnyObject {
         _ pickerController: PhotoPickerController,
         previewDismissComplete atIndex: Int
     )
+    
+    /// corp完成
+    func cropFinish()
 }
 
 public extension PhotoPickerControllerDelegate {
