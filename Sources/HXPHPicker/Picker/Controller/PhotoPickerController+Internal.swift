@@ -41,12 +41,14 @@ extension PhotoPickerController {
             photoAssets: selectedAssetArray,
             isOriginal: isOriginal
         )
-        pickerDelegate?.onlyCropDidSelectEdit(self, didFinishSelection: result)
+        
         if isExternalPickerPreview {
             disablesCustomDismiss = true
         }
         if autoDismiss {
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: true) {
+                self.pickerDelegate?.onlyCropDidSelectEdit(self, didFinishSelection: result)
+            }
         }
     }
     

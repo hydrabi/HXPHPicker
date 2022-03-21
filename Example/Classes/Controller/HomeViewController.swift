@@ -212,11 +212,6 @@ extension HomeViewController {
 }
 
 extension HomeViewController: PhotoPickerControllerDelegate {
-    func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
-    }
-    
-    func cropFinish() {
-    }
     
     func pickerController(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
         pickerController.dismiss(animated: true) {

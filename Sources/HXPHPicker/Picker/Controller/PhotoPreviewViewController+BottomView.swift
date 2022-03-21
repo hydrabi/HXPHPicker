@@ -25,7 +25,7 @@ extension PhotoPreviewViewController: PhotoPickerBottomViewDelegate {
             return
         }
         
-        //只是裁剪 不能执行其它操作
+        // 只是裁剪 不能执行其它操作
         if picker.config.isVideoOnlyCrop {
             picker.onlyCropEditClick()
             return

@@ -87,11 +87,6 @@ extension PhotoPickerView: PhotoPreviewViewControllerDelegate {
 }
 
 extension PhotoPickerView: PhotoPickerControllerDelegate {
-    public func cropFinish() {
-    }
-    
-    public func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
-    }
     
     
     // MARK: 单独预览时的自定义转场动画

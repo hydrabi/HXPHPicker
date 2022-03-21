@@ -389,7 +389,7 @@ public protocol PhotoPickerControllerDelegate: AnyObject {
     func cropFinish()
     
     /// 只裁剪点击编辑按钮回调
-    func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController,didFinishSelection result: PickerResult)
+    func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult)
 }
 
 public extension PhotoPickerControllerDelegate {
@@ -662,4 +662,17 @@ public extension PhotoPickerControllerDelegate {
         _ pickerController: PhotoPickerController,
         previewDismissComplete atIndex: Int
     ) { }
+    
+    /// corp完成
+    func cropFinish()
+    {
+        
+    }
+    
+    /// 只裁剪点击编辑按钮回调
+    func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController,
+                               didFinishSelection result: PickerResult)
+    {
+        
+    }
 }

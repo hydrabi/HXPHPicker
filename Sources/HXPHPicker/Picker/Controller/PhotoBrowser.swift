@@ -188,11 +188,6 @@ open class PhotoBrowser: PhotoPickerController {
 }
 
 extension PhotoBrowser: PhotoPickerControllerDelegate {
-    public func cropFinish() {
-    }
-    
-    public func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
-    }
     
     public func pickerController(
         _ pickerController: PhotoPickerController,

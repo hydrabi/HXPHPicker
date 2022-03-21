@@ -674,11 +674,6 @@ class PickerResultViewController: UIViewController,
 
 // MARK: PhotoPickerControllerDelegate
 extension PickerResultViewController: PhotoPickerControllerDelegate {
-    func onlyCropDidSelectEdit(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
-    }
-    
-    func cropFinish() {
-    }
     
     
     func pickerController(_ pickerController: PhotoPickerController, didFinishSelection result: PickerResult) {
