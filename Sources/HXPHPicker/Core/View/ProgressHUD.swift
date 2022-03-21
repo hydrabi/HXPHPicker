@@ -101,7 +101,7 @@ final public class ProgressHUD: UIView {
         )
         return imageView
     }()
-    var progress: CGFloat = 0 {
+    public var progress: CGFloat = 0 {
         didSet {
             circleView.progress = progress
         }
@@ -199,7 +199,7 @@ final public class ProgressHUD: UIView {
             self.backgroundView.alpha = 1
         }
     }
-    func hide(
+    public func hide(
         withAnimated animated: Bool,
         afterDelay: TimeInterval
     ) {
@@ -222,7 +222,7 @@ final public class ProgressHUD: UIView {
     @objc func handleHideTimer(timer: Timer) {
         hideViews(animated: (timer.userInfo != nil))
     }
-    func hideViews(animated: Bool) {
+    public func hideViews(animated: Bool) {
         if animated {
             UIView.animate(withDuration: 0.25) {
                 self.backgroundView.alpha = 0
@@ -398,7 +398,7 @@ final public class ProgressHUD: UIView {
         )
         view.addSubview(progressView)
     }
-    class func showProgress(
+    public class func showProgress(
         addedTo view: UIView?,
         progress: CGFloat = 0,
         text: String? = nil,
@@ -454,7 +454,7 @@ final public class ProgressHUD: UIView {
         view.addSubview(progressView)
     }
     
-    class func hide(
+    public class func hide(
         forView view: UIView?,
         animated: Bool
     ) {
@@ -465,7 +465,7 @@ final public class ProgressHUD: UIView {
         )
     }
     
-    class func hide(
+    public class func hide(
         forView view: UIView?,
         animated: Bool,
         afterDelay: TimeInterval
