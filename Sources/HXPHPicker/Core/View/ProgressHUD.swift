@@ -16,7 +16,7 @@ extension ProgressHUD {
     }
 }
 
-final class ProgressHUD: UIView {
+final public class ProgressHUD: UIView {
     var mode: Mode {
         didSet {
             if mode == oldValue {
@@ -479,7 +479,7 @@ final class ProgressHUD: UIView {
             )
         }
     }
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         if !frame.equalTo(superview?.bounds ?? frame) {
             frame = superview?.bounds ?? frame
