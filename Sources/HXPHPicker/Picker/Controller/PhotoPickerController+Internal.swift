@@ -33,12 +33,12 @@ extension PhotoPickerController {
     }
     
     /// 只裁剪点击编辑按钮
-    func onlyCropEditClick() {
+    func onlyCropEditClick(_ photoAsset: PhotoAsset) {
         #if HXPICKER_ENABLE_EDITOR
         removeAllEditedPhotoAsset()
         #endif
         let result = PickerResult(
-            photoAssets: selectedAssetArray,
+            photoAssets: [photoAsset],
             isOriginal: isOriginal
         )
         
