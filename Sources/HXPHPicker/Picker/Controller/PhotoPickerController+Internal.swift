@@ -31,6 +31,25 @@ extension PhotoPickerController {
             dismiss(animated: true, completion: nil)
         }
     }
+    
+    /// 只裁剪点击编辑按钮
+    func onlyCropEditClick() {
+        #if HXPICKER_ENABLE_EDITOR
+        removeAllEditedPhotoAsset()
+        #endif
+        let result = PickerResult(
+            photoAssets: selectedAssetArray,
+            isOriginal: isOriginal
+        )
+        pickerDelegate?.onlyCropDidSelectEdit(self, didFinishSelection: result)
+        if isExternalPickerPreview {
+            disablesCustomDismiss = true
+        }
+        if autoDismiss {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func singleFinishCallback(for photoAsset: PhotoAsset) {
         #if HXPICKER_ENABLE_EDITOR
         removeAllEditedPhotoAsset()

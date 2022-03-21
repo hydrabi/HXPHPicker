@@ -129,6 +129,9 @@ public class PickerConfiguration: BaseConfiguration {
     /// 是否缓存[相机胶卷/所有照片]相册
     public var isCacheCameraAlbum: Bool = true
     
+    /// ted添加 选择视频只能裁剪 不能其它操作
+    public var isVideoOnlyCrop = false
+    
     public override init() {
         super.init()
         PhotoManager.shared.isCacheCameraAlbum = isCacheCameraAlbum

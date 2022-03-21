@@ -24,6 +24,13 @@ extension PhotoPreviewViewController: PhotoPickerBottomViewDelegate {
         if !shouldEditAsset {
             return
         }
+        
+        //只是裁剪 不能执行其它操作
+        if picker.config.isVideoOnlyCrop {
+            picker.onlyCropEditClick()
+            return
+        }
+        
         #if HXPICKER_ENABLE_EDITOR && HXPICKER_ENABLE_PICKER
         beforeNavDelegate = navigationController?.delegate
         let pickerConfig = picker.config
@@ -46,6 +53,7 @@ extension PhotoPreviewViewController: PhotoPickerBottomViewDelegate {
             videoEditorConfig.languageType = pickerConfig.languageType
             videoEditorConfig.appearanceStyle = pickerConfig.appearanceStyle
             videoEditorConfig.indicatorType = pickerConfig.indicatorType
+            
             let videoEditorVC = VideoEditorViewController(
                 photoAsset: photoAsset,
                 editResult: photoAsset.videoEdit,
