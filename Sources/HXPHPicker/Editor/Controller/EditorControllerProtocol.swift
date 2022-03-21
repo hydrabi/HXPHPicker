@@ -416,6 +416,9 @@ public extension VideoEditorViewControllerDelegate {
         .zero
     }
     
+    /// corp完成
+    func cropFinish() {}
+    
     private func back(
         _ videoEditorViewController: VideoEditorViewController) {
         if !videoEditorViewController.autoBack {
